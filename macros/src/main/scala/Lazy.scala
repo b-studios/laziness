@@ -32,6 +32,4 @@ package object laziness {
 
   // Every zero argument function can be seen as a thunk.
   implicit def funToThunk[A](f: () => A): Lazy[A] = Lazy(f())
-
-  val disableWarnings = scala.language.implicitConversions
 }
